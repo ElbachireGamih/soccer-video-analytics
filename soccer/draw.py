@@ -399,10 +399,50 @@ class Draw:
         if font is None:
             font = PIL.ImageFont.truetype("fonts/Gidole-Regular.ttf", size=24)
         
-        text_width, text_height = draw.textsize(text, font=font)
+    def text_in_middle_rectangle(
+        img: PIL.Image.Image,
+        origin: tuple,
+        width: int,
+        height: int,
+        text: str,
+        font: PIL.ImageFont = None,
+        color=(255, 255, 255),
+    ) -> PIL.Image.Image:
+        """
+        Draw text in middle of rectangle
+
+        Parameters
+        ----------
+        img : PIL.Image.Image
+            Image
+        origin : tuple
+            Origin of the rectangle (x, y)
+        width : int
+            Width of the rectangle
+        height : int
+            Height of the rectangle
+        text : str
+            Text to draw
+        font : PIL.ImageFont, optional
+            Font to use, by default None
+        color : tuple, optional
+            Color of the text, by default (255, 255, 255)
+
+        Returns
+        -------
+        PIL.Image.Image
+            Image with the text drawn
+        """
+
+        draw = PIL.ImageDraw.Draw(img)
+
+        if font is None:
+            font = PIL.ImageFont.truetype("fonts/Gidole-Regular.ttf", size=24)
+        
+        w, h = draw.textsize(text, font=font)
         text_origin = (
-            origin[0] + width / 2 - text_width / 2,
-            origin[1] + height / 2 - text_height / 2,
+            origin[0] + width / 2 - w/ 2,
+            origin[1] + height / 2 - h / 2,
         )
 
         draw.text(text_origin, text, font=font, fill=color)
