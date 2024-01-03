@@ -3,8 +3,8 @@ from typing import List
 
 import norfair
 import numpy as np
-import PIL
-
+#import PIL
+from PIL import Image, ImageDraw, ImageFont
 
 class Draw:
     @staticmethod
@@ -393,7 +393,7 @@ class Draw:
         PIL.Image.Image
             Image with the text drawn
         """
-
+    
         draw = PIL.ImageDraw.Draw(img)
 
         if font is None:
