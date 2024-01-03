@@ -613,6 +613,7 @@ class Match:
         )
 
         frame = self.draw_counter(
+            
             frame,
             origin=(counter_origin[0] + 35, counter_origin[1] + 130),
             text=self.home.abbreviation,

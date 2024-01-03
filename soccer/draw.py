@@ -3,7 +3,11 @@ from typing import List
 
 import norfair
 import numpy as np
+<<<<<<< HEAD
 #import PIL
+=======
+import PIL
+>>>>>>> 27769db1125cfe505c90aef858d5c83ad9d41c16
 from PIL import Image, ImageDraw, ImageFont
 
 class Draw:
@@ -398,10 +402,10 @@ class Draw:
 
         if font is None:
             font = PIL.ImageFont.truetype("fonts/Gidole-Regular.ttf", size=24)
-
+        
         w, h = draw.textsize(text, font=font)
         text_origin = (
-            origin[0] + width / 2 - w / 2,
+            origin[0] + width / 2 - w/ 2,
             origin[1] + height / 2 - h / 2,
         )
 
