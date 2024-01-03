@@ -3,11 +3,6 @@ from typing import List
 
 import norfair
 import numpy as np
-<<<<<<< HEAD
-#import PIL
-=======
-import PIL
->>>>>>> 27769db1125cfe505c90aef858d5c83ad9d41c16
 from PIL import Image, ImageDraw, ImageFont
 
 class Draw:
